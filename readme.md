@@ -1,3 +1,13 @@
+---
+title: Travel Planner
+emoji: ✈️
+colorFrom: blue
+colorTo: indigo
+sdk: gradio
+app_file: app.py
+pinned: false
+---
+
 # AI Travel Itinerary Planner
 
 A Gradio-based AI app that generates a one-day travel itinerary from a city name and user interests.
