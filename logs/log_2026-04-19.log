@@ -1,0 +1,6 @@
+2026-04-19 17:10:28,592 - INFO - Intilaized TravelPlanner instance
+2026-04-19 17:10:28,593 - INFO - City set sucesfully
+2026-04-19 17:10:28,593 - INFO - Interest also set sucesfully..
+2026-04-19 17:10:28,593 - INFO - Gnerating itineary for london and for interests : ['london bridge', 'thames river']
+2026-04-19 17:10:29,352 - INFO - HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-04-19 17:10:29,366 - INFO - Itineary generated sucesffully..
