@@ -1,6 +1,6 @@
 # AI Travel Itinerary Planner
 
-A Streamlit-based AI app that generates a one-day travel itinerary from a city name and user interests.
+A Gradio-based AI app that generates a one-day travel itinerary from a city name and user interests.
 
 The project uses LangChain with Groq (`llama-3.3-70b-versatile`) to produce concise, bulleted itinerary suggestions.
 
@@ -16,7 +16,7 @@ The project uses LangChain with Groq (`llama-3.3-70b-versatile`) to produce conc
 ## Tech Stack
 
 - Python
-- Streamlit
+- Gradio
 - LangChain (`langchain`, `langchain_core`, `langchain_community`)
 - LangChain Groq (`langchain_groq`)
 - python-dotenv
@@ -50,10 +50,10 @@ Travel Planner/
 
 ## How It Works
 
-1. User submits `city` and `interests` in the Streamlit form.
+1. User submits `city` and `interests` in the Gradio form.
 2. `TravelPlanner` (in `src/core/planner.py`) stores inputs and prepares conversation messages.
 3. `generate_itineary` (in `src/chains/itinerary_chain.py`) formats a prompt and calls Groq LLM.
-4. The generated itinerary is returned and rendered in the Streamlit UI.
+4. The generated itinerary is returned and rendered in the Gradio UI.
 5. Application logs are written to `logs/log_YYYY-MM-DD.log`.
 
 ## Prerequisites
@@ -96,10 +96,10 @@ The app loads this variable through `python-dotenv` in `app.py` and `src/config/
 ## Run The App
 
 ```bash
-streamlit run app.py
+python app.py
 ```
 
-Then open the local URL shown in your terminal (usually `http://localhost:8501`).
+Then open the local URL shown in your terminal (usually `http://127.0.0.1:7860`).
 
 ## Packaging (Optional)
 
