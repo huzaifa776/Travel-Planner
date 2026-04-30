@@ -28,7 +28,7 @@ The project uses LangChain with Groq (`llama-3.3-70b-versatile`) to produce conc
 - Python
 - Gradio
 - LangChain (`langchain`, `langchain_core`, `langchain_community`)
-- LangChain Groq (`langchain_groq`)
+- LangChain Groq using LLAMA (`langchain_groq`)
 - python-dotenv
 
 ## Project Structure
