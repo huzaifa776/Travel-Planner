@@ -1,7 +1,8 @@
 import subprocess
 import time
+import sys
 
-process = subprocess.Popen(['/Users/huzaifamahmood/Desktop/Travel Planner/.venv/bin/python', 'app.py'], 
+process = subprocess.Popen([sys.executable, 'app.py'], 
                            stdout=subprocess.PIPE, 
                            stderr=subprocess.STDOUT, 
                            text=True)

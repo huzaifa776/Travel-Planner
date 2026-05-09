@@ -5,7 +5,7 @@ from src.config.config import GROQ_API_KEY, GROQ_MODEL_NAME
 
 llm = ChatGroq(
     groq_api_key = GROQ_API_KEY,
-    model_name = GROQ_MODEL_NAME,
+    model = GROQ_MODEL_NAME,
     temperature=0.3
 )
 
