@@ -12,7 +12,7 @@ pinned: false
 
 A Gradio-based AI app that generates a one-day travel itinerary from a city name and user interests.
 
-The project uses LangChain with Groq (`llama-3.3-70b-versatile`) to produce concise, bulleted itinerary suggestions.
+The project uses LangChain with Groq (`groq/compound`) to produce concise, bulleted itinerary suggestions.
 
 ## Features
 
@@ -28,7 +28,7 @@ The project uses LangChain with Groq (`llama-3.3-70b-versatile`) to produce conc
 - Python
 - Gradio
 - LangChain (`langchain`, `langchain_core`, `langchain_community`)
-- LangChain Groq using LLAMA (`langchain_groq`)
+- LangChain Groq (`langchain_groq`)
 - python-dotenv
 
 ## Project Structure
@@ -102,6 +102,8 @@ GROQ_API_KEY=your_groq_api_key_here
 ```
 
 The app loads this variable through `python-dotenv` in `app.py` and `src/config/config.py`.
+
+To use a different Groq model, change `GROQ_MODEL_NAME` in your `.env` file. If you want to change the default fallback directly in code, update `GROQ_MODEL_NAME` in `src/config/config.py`.
 
 ## Run The App
 

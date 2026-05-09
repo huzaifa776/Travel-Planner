@@ -1,11 +1,11 @@
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
-from src.config.config import GROQ_API_KEY
+from src.config.config import GROQ_API_KEY, GROQ_MODEL_NAME
 
 
 llm = ChatGroq(
     groq_api_key = GROQ_API_KEY,
-    model_name = "llama-3.3-70b-versatile",
+    model_name = GROQ_MODEL_NAME,
     temperature=0.3
 )
 
