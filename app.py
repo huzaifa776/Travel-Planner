@@ -1,5 +1,6 @@
 import gradio as gr
 from src.core.planner import TravelPlanner
+from src.config.config import GROQ_API_KEY
 from dotenv import load_dotenv
 
 load_dotenv()
@@ -11,10 +12,16 @@ def generate_itineary(city: str, interests: str) -> str:
     if not city or not interests:
         return "Please fill City and Interest to move forward"
 
+    if not GROQ_API_KEY:
+        return "GROQ_API_KEY is missing. Add it to your .env file before generating an itinerary."
+
     planner = TravelPlanner()
     planner.set_city(city)
     planner.set_interests(interests)
-    return planner.create_itineary()
+    try:
+        return planner.create_itineary()
+    except Exception as exc:
+        return f"Failed to generate itinerary: {exc}"
 
 
 with gr.Blocks(title="AI Travel Planner") as app:
